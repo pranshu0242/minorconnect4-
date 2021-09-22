@@ -1,0 +1,395 @@
+body {
+    background: #12181B;
+    color: rgb(253, 253, 253);
+    font-family: 'Arial';
+    overflow-y: hidden;
+    background: linear-gradient(-45deg, #ee7752, #bf3ce7, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+a, a:visited{
+    color: #551A8B;
+}
+
+h1 {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+
+#container {
+    position: absolute;
+    left: 50%;
+    margin-top: 5px;
+    margin-left: -255px;
+   
+}
+
+.box-left {
+    overflow: hidden;
+}
+
+#game_board {
+    border-collapse:collapse;
+}
+
+#coinfeld {
+    position: relative;
+    width: 100%;
+    height: 55px;
+}
+
+#game_board td {
+    border: 1px double  #f6f2f269;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+}
+
+.hover {
+    background-color: #0000002d;
+}
+
+#coin {
+    position: absolute;
+    display: none;
+    left: 0px;
+    top: 0px;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+}
+
+#game_board .coin {
+    cursor: default;
+}
+
+#game_board tr {
+    width: 100%;
+    height: 100%;
+}
+
+#game_board .human-coin,
+.human-coin {
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+}
+
+#game_board .cpu-coin,
+.cpu-coin {
+    border-radius: 50%;
+    background: #DC143C;
+}
+
+#game_board .win {
+    border-radius: 100%;
+    background-color: #12181B;
+    animation: animationFrames 1s infinite;
+    -webkit-animation: animationFrames 1s infinite;
+    -moz-animation: animationFrames 1s infinite;
+    -o-animation: animationFrames 1s infinite;
+    -ms-animation: animationFrames 1s infinite;
+    ;
+}
+
+@keyframes animationFrames{
+    50% {
+        opacity:0.6;
+    }
+    100% {
+        opacity:1;
+        color: #000000;
+    }
+}
+
+@-moz-keyframes animationFrames{
+    50% {
+        opacity:0.6;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes animationFrames {
+    50% {
+        opacity:0.6;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-o-keyframes animationFrames {
+    50% {
+        opacity:0.6;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-ms-keyframes animationFrames {
+    50% {
+        opacity:0.6;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+#debug {
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+.box-right {
+    margin: 20px 10px 10px 0;
+    float: left;
+}
+
+.box-left {
+    position: relative;
+    margin: 10px 10px 10px 0;
+    float: left;
+}
+
+#options {
+    font-size: 13px;
+}
+
+input {
+    border: 1px solid #ffffff;
+    margin: 1px;
+    outline: none;
+}
+
+.input {
+    width: 20px;
+}
+
+.save {
+    padding: auto;
+        border-radius: 50px;
+        background : #48EDA8;
+        padding: 10px 10px 10px;
+       font-size: 15px;
+        color: #000000;
+}
+
+.save:hover, .save:active {
+    background: #ffffff;
+}
+
+#loading {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    background: #DC143C;
+    color: #fff;
+    padding: 4px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+.header {
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.status-running, .status-won, .status-lost {
+    padding: 5px 7px;
+    color: #333;
+}
+
+.status-running {
+    background: white;
+    border-radius: 20px;
+    padding: 10px 10px 10px;
+   font-size: 15px;
+    color: #12181B;
+}
+
+.status-won {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 10px 10px 10px;
+   font-size: 15px;
+    color: #12181B;
+}
+
+
+.status-lost {
+    background: #14dc57;
+    border-radius: 50px;
+    padding: 10px 10px 10px;
+   font-size: 15px;
+    color: #12181B;
+}
+
+
+.status-tie {
+    background: #A4E7F0;
+}
+
+select {
+    background: rgb(255, 255, 255);
+    padding: auto;
+    border-radius: 50px;
+    background : #48EDA8;
+    padding: 10px 10px 10px;
+   font-size: 15px;
+    color: #12181B;
+}
+
+.text {
+    font-size:12px;
+    font-weight:bold;
+    color: #4C4C4C;
+}
+
+.text a {
+    color:#333;
+}
+
+.header-text {
+    margin-bottom: 5px !important;
+    margin-left: 2px !important;
+}
+
+.subheader-text {
+    margin-left: 3px !important;
+}
+
+#navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #333;
+    width: 100%;
+    color: #fff;
+    font-size: 11px;
+}
+
+#navigation .title {
+    padding: 5px 0px 6px 4px;
+}
+
+#navigation a {
+    display: inline-block;
+    padding: 5px 0px;
+    color: #fff;
+    font-size: 11px;
+}
+
+#navigation a:hover {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    #container {
+        margin: 0;
+        top: 50px;
+        left: 0;
+        padding: 0 5px;
+    }
+
+    .box-left {
+        float: none;
+    }
+
+    .box-right {
+        display: block;
+        float: none;
+    }
+}
+.aidebug {
+    font-size: 1px;
+   
+}
+a.btn1 {
+    display: inline-block;
+    padding: 0.5em 1.7em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    background-color: #48EDA8;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #000000;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+    border-color: rgb(255, 255, 255);
+  }
+  
+  a.btn1:hover {
+    border-color: rgb(255, 255, 255);
+  }
+  a.btn2 {
+    display: inline-block;
+    padding: 0.5em 1.7em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    background-color: rgb(80, 10, 172);
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+ 
+  }
+  
+  a.btn2:hover {
+    border-color: white;
+  }
+  .btnp1{
+      border:solid white;
+      border-radius: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top:5px ;
+      padding-bottom:7px ;
+      color: white;
+      background-color: white;
+  }
+  .btnp2{
+    border:solid #DC143C;
+    border-radius: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:5px ;
+    padding-bottom:7px ;
+    color: #DC143C;
+    background-color: #DC143C;
+}

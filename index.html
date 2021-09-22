@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="Artificial Intelligence based on the Minimax- and α-β-Pruning principles.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Connect Four - Minimax Algorithm</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+       
+       
+        
+        <div id="container">
+            <h1 class="header-text">Connect4</h1>
+            <p class="text subheader-text">
+                
+            </p>
+
+            <div class="box-left">
+                <div id="coin"></div>
+                <table id="game_board" cellpadding="0"></table> 
+                <div id="loading">AI is thinking...</div>
+            </div>
+
+            <div class="box-right">
+                <div id="options">
+                    <p class="header">Mode</p>
+                    <p>
+                            <a class="btn1" href="../multiplayer/index.html">multiplayer player </a>
+                    </p>
+                    <p class="header">Difficulty</p>
+                    
+                    <br>
+                    
+                    <p><button class="save" onclick="Game.restartGame();" type="reset">Restart game</button></p> <br>
+                </div>
+
+                
+                <div>
+                    <p>Player 1 - <button class="btnp1">p</button> \\ Player 2 - <button class="btnp2">p</button></p>
+                    
+              
+                </div>
+                <div id="debug">
+                    <p>Status: <br> <br> <span id="status" class="status-running">Running</span></p>
+                    <br>
+                    <br>
+                    <p class="aidebug"><strong>AI debugging</strong></p>
+                    <p class="aidebug">Generated with <span id="ai-iterations">?</span> iterations</p>
+                    <p class="aidebug">Measured with <span id="ai-time">?</span></p>
+                    <p class="aidebug"><span id="ai-column">Column: ?</span></p>
+                    <p class="aidebug"><span id="ai-score">Score: ?</span></p>
+                    <br/>
+                
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/board.js"></script>
+        <script src="js/connect4m.js"></script>
+
+        <script>
+        $('#algorithm-select').change(function() {
+            window.location = 'alphabeta' + $(this).val() + '/index.html';
+        });
+        </script>
+    </body>
+</html>
